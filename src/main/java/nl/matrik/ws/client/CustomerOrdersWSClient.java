@@ -18,7 +18,7 @@ public class CustomerOrdersWSClient {
     public static void main(String[] args) {
 
         try {
-            CustomerOrdersService customerOrdersService = new CustomerOrdersService(new URL("http://localhost:8080/services/customerOrders?wsdl"));
+            CustomerOrdersService customerOrdersService = new CustomerOrdersService(new URL("http://localhost:8080/wsdlfirst-orders/services/customerOrders?wsdl"));
             CustomerOrdersPortType customerOrdersPort = customerOrdersService.getCustomerOrdersPort();
             GetOrdersRequest request = new GetOrdersRequest();
             request.setCustomerId(BigInteger.valueOf(1));
